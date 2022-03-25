@@ -27,9 +27,3 @@ while True:
     serial_port.write(str.encode("poweroff"))
     sleep(breakS)
     serial_port.write(str.encode("\x0D"))
-
-    print("sudo shutdown -h now")
-    print("Shutting down...")
-
-    sleep(2)
-    os.system("sudo shutdown -h now")

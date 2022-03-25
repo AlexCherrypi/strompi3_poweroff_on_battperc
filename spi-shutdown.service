@@ -5,8 +5,7 @@ Before=shutdown.target poweroff.target halt.target
 
 [Service]
 Type=oneshot
-ExecStart=/etc/spi.d/spi-poweroff.sh 
-TimeoutStartSec=0
+ExecStart=/usr/bin/python3 /etc/spi.d/shutdown.py
 
 [Install]
 WantedBy=shutdown.target poweroff.target halt.target

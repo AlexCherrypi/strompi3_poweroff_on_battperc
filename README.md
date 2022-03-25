@@ -62,3 +62,5 @@ Output-Voltage: 4.885V
 ```
 
 There is also a version to reboot with the shutdown.py script as a systemd service as described in https://strompi.joy-it.net/en/helpdesk/252
+
+``` sudo mkdir /etc/spi.d/ && cd /etc/spi.d/ && sudo wget https://raw.githubusercontent.com/AlexCherrypi/strompi3_poweroff_on_battperc/main/spi-poweroff.sh && sudo wget https://raw.githubusercontent.com/AlexCherrypi/strompi3_poweroff_on_battperc/main/shutdown.py && sudo chown -R root:root /etc/spi.d/ && sudo chmod -R 700 /etc/spi.d/ && sudo mkdir -p /etc/systemd/user/ && cd /etc/systemd/user/ && sudo wget https://raw.githubusercontent.com/AlexCherrypi/strompi3_poweroff_on_battperc/main/spi-shutdown.service && sudo chmod 0644 spi-shutdown.service && sudo systemctl --global enable spi-shutdown.service ```
